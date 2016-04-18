@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="jQuery">
+    <meta name="author" content="Lars Berg">
+    <meta name="keywords" content="jQuery Tutorial">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>
+      jQuery Fun
+    </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <!--external css-->
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style_jqry.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js">
+    </script>
+    <script src="js/respond.min.js">
+    </script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--header start-->
+    <header class="head-section">
+      <div class="navbar navbar-default navbar-static-top container">
+          <div class="navbar-header">
+              <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">j<span>Query</span></a>
+          </div>
+          <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                  <li>
+                      <a href="index.html">Hide and Show</a>
+                  </li>
+                  <li>
+                      <a href="fade.html">Fade In and Out</a>
+                  </li>
+                  <li>
+                      <a href="slide.html">Slide Up and Down</a>
+                  </li>
+                  <li>
+                      <a href="animate.html">Animate</a>
+                  </li>
+                  <li>
+                      <a href="stop.html">Stop</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </header>
+    <!--header end-->
+<span><div class="target">
+  .target
+</div><p class="jqry">To hide and show the element when the site loads automatically:</p>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<p class="jqry">The jQuery code to for this example is:</p>
+<pre>
+$(document).ready(function(){
+$(".target").hide(1000, "linear").show(1000, "linear");
+});
+This one above auto loads while the one below you need to click:
+</pre>
+<p class="jqry">The css code to for this example is:</p>
+<pre>
+.target {
+  color: rgb(255, 255, 255); 
+  width: 150px; height: 
+  100px; float: left; 
+  border: 1px solid rgb(34, 34, 34); 
+  margin: 10px; 
+  padding: 5px; 
+  opacity: 1; 
+  display: block; 
+  background: rgb(143, 188, 143);
+}
+</pre>
+<p class="jqry">The html code for this example is:</p>
+<pre>
+  You can put html in a code block by using the xmp tag
+<xmp>
+ <div class="target">
+  .target
+</div>
+</xmp>
+</pre>
+
+</span>
+</br>
+</br>
+
+<div class="target2">
+  .target
+</div>
+<div>
+<p class="jqry">To Just Hide an element</p>
+</div>
+<button class="target2a">Hide</button></br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<p class="jqry">The jQuery code to hide an element is:</p>
+<pre>
+$(document).ready(function(){
+    $(".target2a").click(function(){
+        $(".target2").hide(1000, "linear");
+    });
+});
+See how you have to add a click function an apply it to the button class target2a
+</pre>
+
+<p class="jqry">The css code used is:</p>
+<pre>
+.target2 {
+  color: rgb(255, 255, 255); 
+  width: 150px; height: 
+  100px; float: left; 
+  border: 1px solid rgb(34, 34, 34); 
+  margin: 10px; 
+  padding: 5px; 
+  opacity: 1; 
+  display: block; 
+  background: rgb(143, 188, 143);
+}
+</pre>
+
+<p class="jqry">The html code used is:</p>
+<pre>
+  <xmp>
+<div class="target2">
+  .target
+</div>
+<button class="target2a">Hide</button></br>
+</xmp>
+</pre>
+
+<div class="target3">
+  .target
+</div>
+<div>
+<p class="jqry">To Just Show an element</p>
+</div>
+<button class="target3a">Show</button></br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<p class="jqry">The jQuery code to show an element is:</p>
+<pre>
+$(document).ready(function(){
+    $(".target3a").click(function(){
+        $(".target3").show(1000, "linear");
+    });
+});
+See how you have to add a click function an apply it to the button class target3a
+</pre>
+<p class="jqry">The css code used is:</p>
+<pre>
+.target3 {
+  color: rgb(255, 255, 255); 
+  width: 150px; height: 
+  100px; float: left; 
+  border: 1px solid rgb(34, 34, 34); 
+  margin: 10px; 
+  padding: 5px; 
+  opacity: 1; 
+  display: none; 
+  background: rgb(143, 188, 143);
+}
+</pre>
+</pre>
+<p class="jqry">The html code used</p>
+<pre>
+<xmp>
+<div class="target3">
+  .target
+</div>  
+<button class="target3a">Show</button></br>
+</xmp>
+</pre>
+
+
+
+<div class="target4">
+  .target
+</div>
+<div>
+<p class="jqry">To Toggle an element, This enables you to hide or show the element each time you click toggle</p>
+</div>
+<button class="target4a">Toggle</button></br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<p class="jqry">The jQuery code to toggle an element is:</p>
+<pre>
+$(document).ready(function(){
+    $(".target4a").click(function(){
+        $(".target4").toggle(1000, "linear");
+    });
+});
+See how you have to add a click function an apply it to the button class target4a
+</pre>
+<p class="jqry">The css code used is:</p>
+<pre>
+.target4 {
+  color: rgb(255, 255, 255); 
+  width: 150px; height: 
+  100px; float: left; 
+  border: 1px solid rgb(34, 34, 34); 
+  margin: 10px; 
+  padding: 5px; 
+  opacity: 1; 
+  display: block; 
+  background: rgb(143, 188, 143);
+}
+</pre>
+<p class="jqry">The html code used is:</p>
+<pre>
+<xmp>
+<div class="target4">
+  .target
+</div>
+<button class="target4a">Toggle</button></br>
+</xmp>
+</pre>
+
+    
+    <!--property end-->
+
+
+
+      <!--recent work start-->
+    
+
+    <!--footer start-->
+    <footer class="footer">
+
+    </footer>
+    <!-- footer end -->
+    <!--small footer start -->
+    <footer class="footer-small">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 pull-right">
+                </div>
+                <div class="col-md-4">
+                  <div class="copyright">
+                    <p>&copy; Copyright - Jquery Learn time Fun</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--small footer end-->
+
+    <!-- js placed at the end of the document so the pages load faster
+<script src="js/jquery.js">
+</script>
+-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jQuery Core -->
+<script src="js/funtimes.js"></script>
+<!-- jQuery Core -->
+
+
+
+
+
+
+    <!--common script for all pages-->
+
+
+  </body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="jQuery">
+    <meta name="author" content="Lars Berg">
+    <meta name="keywords" content="jQuery Tutorial">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>
+      jQuery Fun
+    </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <!--external css-->
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style_jqry.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js">
+    </script>
+    <script src="js/respond.min.js">
+    </script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--header start-->
+    <header class="head-section">
+      <div class="navbar navbar-default navbar-static-top container">
+          <div class="navbar-header">
+              <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">j<span>Query</span></a>
+          </div>
+          <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                  <li>
+                      <a href="index.html">Hide and Show</a>
+                  </li>
+                  <li>
+                      <a href="fade.html">Fade In and Out</a>
+                  </li>
+                  <li>
+                      <a href="slide.html">Slide Up and Down</a>
+                  </li>
+                  <li>
+                      <a href="animate.html">Animate</a>
+                  </li>
+                  <li>
+                      <a href="stop.html">Stop</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </header>
+    <!--header end-->
+<span>
+
+  <div class="animate1">
+  .target
+  </div>
+<div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<p class="jqry">This box auto animates after the dom loads</p>
+</div>
+<p class="jqry">The jQuery code to for this example is:</p>
+<pre>
+$(document).ready(function(){
+        $(".animate1").animate({left: '250px'});
+});
+This one above auto loads while the one below you need to click:
+</pre>
+<p class="jqry">The css code to for this example is:</p>
+<pre>
+.animate1{
+  background:lightblue;
+  border: 1px solid rgb(34, 34, 34); 
+  height:100px;
+  width:100px;
+  position:absolute;
+}
+</pre>
+<p class="jqry">The html code for this example is:</p>
+<pre>
+  You can put html in a code block by using the xmp tag
+<xmp>
+  <div class="animate1">
+  .target
+  </div>
+</xmp>
+</pre>
+
+</span>
+</br>
+</br>
+
+<div class="animate2">
+  .target
+</div>
+<div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<p class="jqry">To Animate the button causing it to move from left to right</p>
+</div>
+<button class="animate2a">Animate</button></br>
+</br>
+</br>
+<p class="jqry">The jQuery code to animate a box from left to right</p>
+<pre>
+$(document).ready(function(){
+    $(".animate2a").click(function(){
+        $(".animate2").animate({left: '250px'});
+    });
+});
+See how you have to add a click function an apply it to the button class animate2a
+</pre>
+
+<p class="jqry">The css code used is:</p>
+<pre>
+.animate2{
+  background:lightblue;
+  border: 1px solid rgb(34, 34, 34); 
+  height:100px;
+  width:100px;
+  position:absolute;
+}
+</pre>
+<p class="jqry">The html code used is:</p>
+<pre>
+  <xmp>
+<div class="animate2">
+  .target
+</div>
+<button class="animate2a">Animate</button></br>
+</xmp>
+</pre>
+
+<div class="animate3">
+  .target
+</div>
+<div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<p class="jqry">To animate an object and make it bigger</p>
+</div>
+<button class="animate3a">Animate to make bigger</button></br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<p class="jqry">The jQuery code animate an object and make it bigger</p>
+<pre>
+$(document).ready(function(){
+    $(".animate3a").click(function(){
+        $(".animate3").animate({
+            left: '250px',
+            opacity: '0.5',
+            height: '150px',
+            width: '150px'
+        });
+    });
+});
+</pre>
+<p class="jqry">The css code used is:</p>
+<pre>
+.animate3{
+  background:lightblue;
+  border: 1px solid rgb(34, 34, 34); 
+  height:100px;
+  width:100px;
+  position:absolute;
+}
+</pre>
+</pre>
+<p class="jqry">The html code used</p>
+<pre>
+<xmp>
+<div class="animate3">
+  .target
+</div>
+<button class="animate3a">Animate to make bigger</button></br>
+</xmp>
+</pre>
+
+
+
+<div class="animate4">
+  .target
+</div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<div>
+<p class="jqry">To Toggle an element, This enables you to make the object bigger or smaller when you click toggle</p>
+</div>
+<button class="animate4a">Toggle</button></br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<p class="jqry">The jQuery code to toggle an element is:</p>
+<pre>
+$(document).ready(function(){
+    $(".animate4a").click(function(){
+        $(".animate4").animate({
+            height: 'toggle',
+            width: 'toggle'
+        });
+    });
+});
+See how you have to add a click function an apply it to the button class animate4a
+</pre>
+<p class="jqry">The css code used is:</p>
+<pre>
+.animate4 {
+  background:lightblue;
+  border: 1px solid rgb(34, 34, 34); 
+  height:150px;
+  width:150px;
+  position:absolute;
+}
+</pre>
+<p class="jqry">The html code used is:</p>
+<pre>
+<xmp>
+<div class="animate4">
+  .target
+</div>
+<button class="animate4a">Toggle</button></br>
+<button class="target4a">Toggle</button></br>
+</xmp>
+</pre>
+
+
+
+<div class="animate5">
+  .target
+</div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<div>
+<p class="jqry">To animate an element with a sequence of events</p>
+</div>
+<button class="animate5a">Animate Now</button></br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<p class="jqry">The jQuery code to animate an element with a sequence of events:</p>
+<pre>
+$(document).ready(function(){
+    $(".animate5a").click(function(){
+        var funtimes = $(".animate5");
+        funtimes.animate({height: '300px', opacity: '0.4'}, "slow");
+        funtimes.animate({width: '300px', opacity: '0.8'}, "slow");
+        funtimes.animate({height: '100px', opacity: '0.4'}, "slow");
+        funtimes.animate({width: '100px', opacity: '0.8'}, "slow");
+    });
+});
+</pre>
+<p class="jqry">The css code used is:</p>
+<pre>
+.animate5{
+  background:lightblue;
+  border: 1px solid rgb(34, 34, 34); 
+  height:100px;
+  width:100px;
+  position:absolute;
+}
+</pre>
+<p class="jqry">The html code used is:</p>
+<pre>
+<xmp>
+  <div class="animate5">
+    .target
+  <p class="jqry">To animate an element with a sequence of events</p>
+  </div>
+  <button class="animate5a">Animate Now</button></br>
+</xmp>
+</pre>
+
+<div class="animate6">
+  Funtimes
+</div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<div>
+<p class="jqry">To animate an element with the box and the font being animated together</p>
+</div>
+<button class="animate6a">Animate Now</button></br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<p class="jqry">The jQuery code to animate an element with a sequence of events:</p>
+<pre>
+$(document).ready(function(){
+    $(".animate6a").click(function(){
+        var funtimes = $(".animate6");  
+        funtimes.animate({left: '100px'}, "slow");
+        funtimes.animate({fontSize: '3em'}, "slow");
+    });
+});
+</pre>
+<p class="jqry">The css code used is:</p>
+<pre>
+.animate6{
+  background:lightblue;
+  height:100px;
+  width:200px;
+  position:absolute;
+}
+</pre>
+<p class="jqry">The html code used is:</p>
+<pre>
+<xmp>
+<div class="animate6">
+  Funtimes
+</div>
+<button class="animate6a">Animate Now</button></br>
+</xmp>
+</pre>
+
+    
+    <!--property end-->
+
+
+
+      <!--recent work start-->
+    
+
+    <!--footer start-->
+    <footer class="footer">
+
+    </footer>
+    <!-- footer end -->
+    <!--small footer start -->
+    <footer class="footer-small">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 pull-right">
+                </div>
+                <div class="col-md-4">
+                  <div class="copyright">
+                    <p>&copy; Copyright - Jquery Learn time Fun</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--small footer end-->
+
+    <!-- js placed at the end of the document so the pages load faster
+<script src="js/jquery.js">
+</script>
+-->
+<!-- jQuery Core -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jQuery Core -->
+<script src="js/funtimes.js"></script>
+<script type="text/javascript" src="js/hover-dropdown.js"></script>
+<!-- jQuery Core -->
+
+
+  </body>
+</html>

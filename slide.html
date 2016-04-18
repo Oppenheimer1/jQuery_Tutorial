@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="jQuery">
+    <meta name="author" content="Lars Berg">
+    <meta name="keywords" content="jQuery Tutorial">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>
+      jQuery Fun
+    </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <!--external css-->
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style_jqry.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js">
+    </script>
+    <script src="js/respond.min.js">
+    </script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--header start-->
+    <header class="head-section">
+      <div class="navbar navbar-default navbar-static-top container">
+          <div class="navbar-header">
+              <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">j<span>Query</span></a>
+          </div>
+          <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                  <li>
+                      <a href="index.html">Hide and Show</a>
+                  </li>
+                  <li>
+                      <a href="fade.html">Fade In and Out</a>
+                  </li>
+                  <li>
+                      <a href="slide.html">Slide Up and Down</a>
+                  </li>
+                  <li>
+                      <a href="animate.html">Animate</a>
+                  </li>
+                  <li>
+                      <a href="stop.html">Stop</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </header>
+    <!--header end-->
+<span><div class="up1">Click to slide down panel</div>
+<div class="slide1">Fun Times</div>
+<p class="jqry">To slideDown and slideUp the element when the site loads automatically:</p>
+<p class="jqry">The jQuery code to for this example is:</p>
+<pre>
+$(document).ready(function(){
+    $(".slide1").slideDown(1000,"linear").slideUp(1000,"linear"); 
+});
+This one above auto Slides Down and then Slides Up while the one below you need to click:
+</pre>
+<p class="jqry">The css code to for this example is:</p>
+<pre>
+.slide1, .up1{
+    padding: 5px;
+    text-align: center;
+    background-color: #A0CFEC;
+    border: solid 1px #c3c3c3;
+}
+.slide1 {
+    padding: 50px;
+    display: none;
+}
+</pre>
+<p class="jqry">The html code to for this example is:</p>
+<pre>
+  <xmp>
+  <div class="up1">Click to slide down panel</div>
+  <div class="slide1">Fun Times</div>
+</xmp>
+</pre>
+
+</span>
+</br>
+</br>
+
+<div class="up2">Click to slide down panel</div>
+<div class="slide2">Fun Times</div>
+<div>
+<p class="jqry">To Just Slide Down an element click the panel or click the button</p>
+</div>
+<button class="up2">Slide Down</button></br>
+<p class="jqry">The jQuery code to slide down an element is:</p>
+<pre>
+$(document).ready(function(){
+    $(".up2").click(function(){
+        $(".slide2").slideDown(1000,"linear");
+    });
+});
+See how you have to add a click function an apply it to the button class up2a
+</pre>
+<p class="jqry">The css code to do this is:</p>
+<pre>
+.slide2, .up2{
+    padding: 5px;
+    text-align: center;
+    background-color: #A0CFEC;
+    border: solid 1px #c3c3c3;
+}
+.slide2 {
+    padding: 50px;
+    display: none;
+}
+
+</pre>
+<p class="jqry">The html code to do this is:</p>
+<pre>
+<xmp>
+      <div class="up2">Click to slide down panel</div>
+      <div class="slide2">Fun Times</div>
+      <button class="up2">Slide Down</button></br>
+</xmp>
+</pre>
+</br>
+
+<div class="up3">Click to slide up panel</div>
+<div class="slide3">Fun Times</div>
+<div>
+<p class="jqry">To Just Slide Up the element click the panel or click the button</p>
+</div>
+<button class="up3">Slide Up</button></br>
+<p class="jqry">The jQuery code to slide down an element is:</p>
+<pre>
+$(document).ready(function(){
+    $(".up3").click(function(){
+        $(".slide3").slideUp(1000,"linear");
+    });
+});
+See how you have to add a click function an apply it to the button class up2a
+</pre>
+<p class="jqry">The css code for this is:</p>
+<pre>
+.slide3, .up3{
+    padding: 5px;
+    text-align: center;
+    background-color: #A0CFEC;
+    border: solid 1px #c3c3c3;
+}
+.slide3 {
+    padding: 50px;
+}
+</pre>
+<p class="jqry">The html code for this is:</p>
+<pre>
+<xmp>
+  <div class="up3">Click to slide up panel</div>
+  <div class="slide3">Fun Times</div>
+  <button class="up3">Slide Up</button></br>
+</xmp>
+</pre>
+
+<p class="jqry">To Toggle an element, This enables you to slide up or slide down the element each time you click toggle</p>
+<div class="up4">Click to slide up or down the panel</div>
+<div class="slide4">Fun Times</div>
+<div>
+<p class="jqry">To toggle the element click the panel or click the button</p>
+</div>
+<button class="up4">Toggle</button></br>
+<p class="jqry">The jQuery code to toggle and element between slide down and slide up is:</p>
+<pre>
+$(document).ready(function(){
+    $(".up4").click(function(){
+        $(".slide4").slideToggle(1000,"linear");
+    });
+});
+See how you have to add a click function an apply it to the button class up2a
+</pre>
+<p class="jqry">The css code used for this is:</p>
+<pre>
+.slide4, .up4{
+    padding: 5px;
+    text-align: center;
+    background-color: #A0CFEC;
+    border: solid 1px #c3c3c3;
+}
+.slide4 {
+    padding: 50px;
+    display: none;
+}
+</pre>
+<p class="jqry">The html code used for this is:</p>
+<pre>
+<xmp>
+  <div class="up4">Click to slide up or down the panel</div>
+  <div class="slide4">Fun Times</div>
+  <div>
+  <button class="up4">Toggle</button></br>
+</xmp>
+</pre>
+
+    
+    <!--property end-->
+
+
+
+      <!--recent work start-->
+    
+
+    <!--footer start-->
+    <footer class="footer">
+
+    </footer>
+    <!-- footer end -->
+    <!--small footer start -->
+    <footer class="footer-small">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 pull-right">
+                </div>
+                <div class="col-md-4">
+                  <div class="copyright">
+                    <p>&copy; Copyright - Jquery Learn time Fun</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--small footer end-->
+
+    <!-- js placed at the end of the document so the pages load faster
+<script src="js/jquery.js">
+</script>
+-->
+<!-- jQuery Core -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jQuery Core -->
+<script src="js/funtimes.js"></script>
+<script type="text/javascript" src="js/hover-dropdown.js"></script>
+<!-- jQuery Core -->
+
+
+  </body>
+</html>
